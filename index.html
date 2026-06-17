@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akari Yoshida - Portfolio</title>
+    <style>
+        /* 基本スタイル */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* ヘッダーとナビゲーション */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #666;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* コンテンツエリア */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        section {
+            margin-bottom: 60px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+        h2 {
+            font-size: 22px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* ABOUT */
+        .profile {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .profile-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* WORKS & SKILL */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .tags span {
+            background: #eee;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        /* ツールリスト */
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .tools span {
+            background: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Akari Yoshida</h1>
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#works">WORKS</a>
+        <a href="#skill">SKILL</a>
+        <a href="#tool">TOOL</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>ABOUT</h2>
+        <div class="profile">
+            <div class="profile-text">
+                <p><strong>名前：</strong>吉田 明理 (Akari Yoshida)</p>
+                <p><strong>所属：</strong>香川大学大学院 工学系 安藤研究室（2028年卒業予定）</p>
+                <p><strong>所在地：</strong>香川県 / 岡山県近郊</p>
+                <p>
+                    情報セキュリティと自然言語処理に興味を持つエンジニアリング専攻の大学院生です。<br>
+                    特に、フェイクニュースの多角的な評価や、大規模言語モデル（LLM）の安全性に関する研究に取り組んできました。
+                    現在は、Bluesky APIデータや国会議事録などを活用した新たなテキストデータ分析のアプローチを構想・研究しています。
+                </p>
+                <p>
+                    データサイエンスの知見と、Webアプリケーション開発のスキルの両輪を活かし、
+                    技術を用いて社会の課題解決に貢献できるエンジニアを目指して2026年夏のインターンシップに挑戦中です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works">
+        <h2>WORKS (Research & Projects)</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>学士論文：フェイクニュースの多角的評価</h3>
+                <p>日本語フェイクニュースデータセットを活用し、「情報源ドメイン」などの新規ラベルを定義して多角的にデータセットを分析・評価しました。LLMの安全性プロトコルについても知見を深めました。</p>
+                <div class="tags">
+                    <span>Python</span> <span>NLP</span> <span>情報セキュリティ</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Webアプリケーション開発</h3>
+                <p>バックエンド処理を伴うWebアプリケーションの開発経験があります。データ分析の結果を可視化し、ユーザーが直感的に操作できるインターフェースの構築に取り組んでいます。</p>
+                <div class="tags">
+                    <span>Python</span> <span>Flask</span> <span>Web Dev</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>修士研究（進行中）</h3>
+                <p>Bluesky APIから取得したデータや国会議事録を用いた、新たなテキストマイニング・トピック分析の手法を現在模索・研究中です。</p>
+                <div class="tags">
+                    <span>データ分析</span> <span>API連携</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skill">
+        <h2>SKILL</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>データ分析 & 可視化</h3>
+                <p>生データの整形から統計的分析、トピックモデリングまでの一連の処理を実行できます。目的に応じた適切なグラフを作成し、データの傾向を分かりやすく提示することが得意です。</p>
+                <p><strong>主なライブラリ:</strong> pandas, matplotlib, seaborn, bertopic</p>
+            </div>
+            <div class="card">
+                <h3>バックエンド開発</h3>
+                <p>Pythonの軽量フレームワークを用いたWebアプリケーションの構築、ルーティング、データの受け渡しなどの実装経験があります。</p>
+                <p><strong>フレームワーク:</strong> Flask</p>
+            </div>
+            <div class="card">
+                <h3>ドキュメント・組版</h3>
+                <p>学術論文、レポート、履歴書などの専門的なフォーマットにおいて、数式や表、参考文献の厳密なレイアウト調整を伴う美しい文書作成が可能です。</p>
+                <p><strong>ツール:</strong> LaTeX</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOL -->
+    <section id="tool">
+        <h2>TOOL</h2>
+        <div class="tools">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Git / GitHub</span>
+            <span>Jupyter Notebook</span>
+            <span>LaTeX</span>
+            <span>VS Code</span>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>CONTACT</h2>
+        <p style="text-align: center;">
+            インターンシップや採用に関するお問い合わせは、以下のリンクよりお願いいたします。
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" style="margin: 0 10px;">GitHub</a> | 
+            <a href="mailto:your.email@example.com" style="margin: 0 10px;">Email</a>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Akari Yoshida. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
